@@ -11,13 +11,13 @@ export class UsersController {
     
     @Post()
     create(@Body() req:CreateUserDTO){
-        return this.userService.create()
+        return this.userService.create(req)
  
     }
 
     @Get()
     findAll(){
-        return this.userService.findAll()
+        return this.userService.findAll();
     }
 
     @Get(':id')
